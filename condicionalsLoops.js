@@ -25,11 +25,11 @@ if (age >= 18) {
 
 const pet = "serpiente";
 //Escribe tu código aquí
-if (pet === "perro") {
-  console.log("Tengo un perro");
-} else if (pet === "gato") {
-  console.log("Tengo un gato");
-}
+if(pet === "perro" || pet === "gato" || pet === "pajaro" ){
+  console.log(`Tengo un ${pet}`);
+  } else{
+  console.log('No tengo una mascota convencional');
+  }
 
 //Ejercicio 4: cambia el valor de pet a "serpiente" y mira el resultado en consola para comprobar que tu código funciona bien.
 
@@ -49,6 +49,7 @@ switch (pet) {
     console.log("Tengo una serpiente");
     break;
   default:
+    console.log('No tengo una mascota convencional....');
    
 }
 
@@ -88,7 +89,7 @@ for (let i = 0; i <=10; i++) {
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'.
 
-const programmers = [
+let programmers = [
   {
     name: "Ada",
     lastname: "Lovelace",
@@ -113,7 +114,7 @@ const programmers = [
 
 //Escribe tu código aquí
 
-for (const property in programmers) {
+for (let property in programmers) {
     console.log(`${property}: ${programmers[property].name} ${programmers[property].lastname} ${programmers[property].knowledge}`);
         
     }
@@ -121,10 +122,10 @@ for (const property in programmers) {
 
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
-const names = ["Rocío", "Lola", "Antía", "Laura", "Noelia"];
+let names = ["Rocío", "Lola", "Antía", "Laura", "Noelia"];
 
 //Escribe tu código aquí
-for (const property of names) {
+for (let property of names) {
    console.log(`${"Hola mi nombre es "}${property} `);
 }
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
